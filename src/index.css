@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --shark-gradient: linear-gradient(135deg, #e11d48 0%, #9f1239 100%);
+}
+
+body {
+  @apply bg-black text-white font-sans;
+  overflow-x: hidden;
+}
+
+.hero-gradient {
+  background-image: radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.text-gradient {
+  background: var(--shark-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  @apply bg-shark-red-600 hover:bg-shark-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  background-image: var(--shark-gradient);
+}
+
+.card {
+  @apply bg-gray-900 p-6 rounded-xl border border-shark-red-800/30 hover:border-shark-red-600/50 transition-all duration-300;
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  box-shadow: 0 4px 30px rgba(225, 29, 72, 0.1);
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-display font-bold mb-8 text-gradient;
+}
+
+.red-glow {
+  box-shadow: 0 0 30px rgba(225, 29, 72, 0.3);
+}
+
+.pixel-pattern {
+  background-image: 
+    radial-gradient(rgba(225, 29, 72, 0.15) 2px, transparent 2px),
+    radial-gradient(rgba(225, 29, 72, 0.1) 2px, transparent 2px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
